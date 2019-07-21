@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-const Navbar = props => {
+const Navbar = ({title, icon}) => {
     return (
         <Fragment>
             <nav className="nav bg-primary">
                 <h1>
-                    {props.title}
-                    <i className={props.icon} />
+                    {title}
+                    <i className={icon} />
                 </h1>
             </nav>
         </Fragment>
