@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 const AnimeItem = ({ anime: { attributes } }) => {
     return (
         <div className="card text-center">
@@ -11,12 +11,16 @@ const AnimeItem = ({ anime: { attributes } }) => {
             />
             <h3>{attributes.titles.en_jp}</h3>
             <div>
-                <a href='/' className="btn btn-dark btn-sm my-1">
+                <a href="/" className="btn btn-dark btn-sm my-1">
                     More
                 </a>
             </div>
         </div>
     );
+};
+
+AnimeItem.propTypes = {
+    anime: PropTypes.object.isRequired
 };
 
 export default AnimeItem;
