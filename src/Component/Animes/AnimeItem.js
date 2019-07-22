@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
-const AnimeItem = ({ anime: { attributes } }) => {
+const AnimeItem = ({ anime: { id,attributes } }) => {
     return (
         <div className="card text-center">
             <img
@@ -11,9 +12,9 @@ const AnimeItem = ({ anime: { attributes } }) => {
             />
             <h3>{attributes.titles.en_jp}</h3>
             <div>
-                <a href="/" className="btn btn-dark btn-sm my-1">
+                <Link to={`/anime/${attributes.slug}/${id}`} className="btn btn-dark btn-sm my-1">
                     More
-                </a>
+                </Link>
             </div>
         </div>
     );
