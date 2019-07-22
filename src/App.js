@@ -16,10 +16,6 @@ class App extends Component {
         alert: null
     };
 
-    // componentDidUpdate() {
-    //     console.log('state: ', this.state);
-    // }
-
     searchAnimes = async text => {
         this.setState({ loading: true });
         const response = await axios.get(
@@ -41,7 +37,7 @@ class App extends Component {
             `https://kitsu.io/api/edge/anime/${id}`
         );
 
-        const {data: {data: anime}} = response;
+        const {data: anime} = response.data;
 
         this.setState({
             anime: anime.attributes,
