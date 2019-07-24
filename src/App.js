@@ -63,7 +63,7 @@ class App extends Component {
         }, 3000);
     };
 
-    render() {
+    render() {console.log(anime);
         const { animes, anime, loading } = this.state;
         return (
             <Router>
