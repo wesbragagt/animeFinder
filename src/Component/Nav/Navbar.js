@@ -14,7 +14,7 @@ const Navbar = ({ title, icon }) => {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About animefinder</Link>
+                        <Link to="/about">About anime finder</Link>
                     </li>
                 </ul>
             </nav>
